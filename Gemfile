@@ -73,3 +73,10 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+
+# sass rails
+gem "sass-rails"
+
+#simple form
+gem 'simple_form', '~> 5.0', '>= 5.0.2'

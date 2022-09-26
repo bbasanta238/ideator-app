@@ -83,3 +83,5 @@ gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
 #paginating site
 gem 'will_paginate', '~> 3.3'
+
+gem "hotwire-rails", "~> 0.1.3"

@@ -1,8 +1,11 @@
-<p>Good morning</p>
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Add Idea
-</button>
+
+<div class="d-grid">
+  <button type="button" class="btn btn-primary m-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Add Idea
+  </button>
+</div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -28,7 +31,7 @@
 
 <%# dispaying idea %>
 <% @ideas.each do |idea| %>
-  <div class="card">
+  <div class="card mb-3">
     <div class="card-body">
       <blockquote class="blockquote mb-0">
         <p><%= idea.description %></p>
@@ -36,7 +39,12 @@
       </blockquote>
       <br>
       <div class="btn-group" role="group">
-        <%= link_to 'Delete', idea_path(idea), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you sure?"} %>
+        <%# <%= form_tag idea_path(idea), method: "delete" do %>
+        <%# <%= submit_tag "Delete" ,class: 'btn btn-sm btn-danger',data: {confirm: "Are you sure?"}%> 
+        <%# <% end %> 
+        <%# <%= link_to 'Delete', idea_path(idea), method: :delete, class: 'btn btn-sm btn-danger' %> 
+        <%= link_to 'Delete', idea_path(idea), method: :delete, class: 'btn btn-sm btn-danger', data: {turbo_method: :delete,
+            turbo_confirm: "Are you sure?"} %>
         <%= link_to 'Revise', edit_idea_path(idea), class: 'btn btn-sm btn-success' %>
     </div>
     </div>

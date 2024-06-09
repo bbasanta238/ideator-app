@@ -75,4 +75,5 @@ RSpec.configure do |config|
   # end
 
   # Capybara.javascript_driver = :selenium_chrome_headless
+  # Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 end

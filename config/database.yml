@@ -5,9 +5,9 @@
 #   gem "sqlite3"
 #
 default: &default
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  adapter: mysql2  # or postgresql
+  encoding: utf8
+  pool: 5
 
 development:
   <<: *default
@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: "terraform-20240903070210088900000001"
+  username: "admin"
+  password: "veryStrongpassword1"
+  host: "terraform-20240903070210088900000001.cpy0e0w6g2b2.eu-north-1.rds.amazonaws.com"

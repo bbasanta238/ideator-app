@@ -61,6 +61,7 @@ set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
+
 namespace :puma do
   desc "Create Directories for Puma Pids and Socket"
   task :make_dirs do
@@ -69,5 +70,29 @@ namespace :puma do
       execute "mkdir #{shared_path}/tmp/pids -p"
     end
   end
+
+  desc "Start Puma"
+  task :start do
+    on roles(:app) do
+      within release_path do
+        execute "bundle exec puma -C #{fetch(:puma_bind)} -e #{fetch(:rails_env)}"
+      end
+    end
+  end
+
+  desc "Stop Puma"
+  task :stop do
+    on roles(:app) do
+      execute "if test -f #{fetch(:puma_pid)}; then kill -s TERM `cat #{fetch(:puma_pid)}`; fi"
+    end
+  end
+
+  desc "Restart Puma"
+  task :restart do
+    on roles(:app) do
+      execute "if test -f #{fetch(:puma_pid)}; then kill -s USR1 `cat #{fetch(:puma_pid)}`; else #{fetch(:puma_bin)}; fi"
+    end
+  end
+
   before :start, :make_dirs
 end

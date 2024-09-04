@@ -40,9 +40,9 @@
 
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.19.1"
-set :application, "ideator_app"
+set :application, "ideator"
 set :repo_url, "https://github.com/bbasanta238/ideator-app.git"
-set :deploy_to, "/home/ubuntu/ideator_app"
+set :deploy_to, "/home/ubuntu/ideator"
 set :use_sudo, true
 set :branch, "main"
 set :linked_files, %w{config/master.key config/database.yml}

@@ -25,3 +25,5 @@ production:
   database: terraform-20240903085622721500000004
   username: admin
   password: veryStrongpassword1
+  host: terraform-20240903085622721500000004.cjgi4cu0y5dc.ap-northeast-1.rds.amazonaws.com
+  port: 3306

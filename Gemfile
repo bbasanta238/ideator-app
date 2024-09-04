@@ -88,3 +88,10 @@ gem 'simple_form', '~> 5.0', '>= 5.0.2'
 gem 'will_paginate', '~> 3.3'
 
 gem "hotwire-rails", "~> 0.1.3"
+
+gem "capistrano"
+gem "capistrano-rails"
+gem "capistrano-bundler"
+gem "capistrano-rbenv"
+gem "capistrano3-puma"
+

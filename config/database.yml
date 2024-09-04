@@ -22,4 +22,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: terraform-20240903085622721500000004
+  username: admin
+  password: veryStrongpassword1

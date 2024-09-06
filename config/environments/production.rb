@@ -90,11 +90,4 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  server "10.0.21.98", user: "ubuntu", roles: %w{web app db}
-  set :ssh_options, {
-    forward_agent: true,
-    auth_methods: %w[publickey],
-    keys: %w[/home/ubuntu/.ssh/re_ssh.pem],
-  }
 end

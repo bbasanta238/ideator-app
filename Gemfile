@@ -62,14 +62,14 @@ group :development, :test do
 end
 
 group :development do
-  # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'capistrano', '~> 3.10', require: false
+  gem 'capistrano-rails', '~> 1.5', require: false
+  gem 'capistrano-rbenv', '~> 2.1'
+  gem 'capistrano-bundler', '~> 1.6'
+  gem 'capistrano3-unicorn', '~> 0.2.1'
+  gem 'capistrano-local-precompile', '~> 1.2', require: false
+  gem 'capistrano-rake', '~> 0.2.0', require: false
   gem "web-console"
-
-  # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
-
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
   gem 'rspec-rails'
 end
 
@@ -92,9 +92,4 @@ gem 'will_paginate', '~> 3.3'
 
 gem "hotwire-rails", "~> 0.1.3"
 
-gem "capistrano"
-gem "capistrano-rails"
-gem "capistrano-bundler"
-gem "capistrano-rbenv"
-gem "capistrano3-puma"
 

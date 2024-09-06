@@ -84,6 +84,8 @@ GEM
       capistrano (~> 3.1)
     capistrano-local-precompile (1.2.0)
       capistrano (>= 3.8)
+    capistrano-puma (0.2.3)
+      capistrano (>= 3.0)
     capistrano-rails (1.6.3)
       capistrano (~> 3.1)
       capistrano-bundler (>= 1.1, < 3)
@@ -92,8 +94,6 @@ GEM
     capistrano-rbenv (2.2.0)
       capistrano (~> 3.1)
       sshkit (~> 1.3)
-    capistrano3-unicorn (0.2.1)
-      capistrano (~> 3.1, >= 3.1.0)
     capybara (3.40.0)
       addressable
       matrix
@@ -300,10 +300,10 @@ DEPENDENCIES
   capistrano (~> 3.10)
   capistrano-bundler (~> 1.6)
   capistrano-local-precompile (~> 1.2)
+  capistrano-puma
   capistrano-rails (~> 1.5)
   capistrano-rake (~> 0.2.0)
   capistrano-rbenv (~> 2.1)
-  capistrano3-unicorn (~> 0.2.1)
   capybara (>= 3.26)
   cssbundling-rails
   debug

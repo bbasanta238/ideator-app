@@ -66,7 +66,8 @@ group :development do
   gem 'capistrano-rails', '~> 1.5', require: false
   gem 'capistrano-rbenv', '~> 2.1'
   gem 'capistrano-bundler', '~> 1.6'
-  gem 'capistrano3-unicorn', '~> 0.2.1'
+  gem 'capistrano-puma', require: false
+  # gem 'capistrano3-unicorn', '~> 0.2.1'
   gem 'capistrano-local-precompile', '~> 1.2', require: false
   gem 'capistrano-rake', '~> 0.2.0', require: false
   gem "web-console"

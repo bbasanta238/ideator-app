@@ -62,16 +62,13 @@ group :development, :test do
 end
 
 group :development do
-  gem 'capistrano', '~> 3.10', require: false
-  gem 'capistrano-rails', '~> 1.5', require: false
-  gem 'capistrano-rbenv', '~> 2.1'
-  gem 'capistrano-bundler', '~> 1.6'
-  gem 'capistrano-puma', require: false
-  # gem 'capistrano3-unicorn', '~> 0.2.1'
-  gem 'capistrano-local-precompile', '~> 1.2', require: false
-  gem 'capistrano-rake', '~> 0.2.0', require: false
-  gem "web-console"
-  gem 'rspec-rails'
+gem "capistrano"
+gem "capistrano-rails"
+gem "capistrano-bundler"
+gem "capistrano-rbenv"
+gem "capistrano3-puma"
+gem "web-console"
+gem "rspec-rails"
 end
 
 group :test do
